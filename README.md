@@ -8,7 +8,7 @@ curl -i -X  POST -H "Content-Type:application/json" -d '{  "name" : "V1" }' http
 
 Связь пользователя с автомобилем:
 
-curl -i -X GET  "http://localhost:8080/addVehicle?personId=1&vehicleId=1"
+curl -i -X GET  "http://localhost:8080/functions/addVehicle?personId=1&vehicleId=1"
 
 Поиск:
 
