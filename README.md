@@ -1,3 +1,5 @@
+Для работы с данными используется RestRepository, поэтому эндпойнты для CRUD-операций создаются автоматически, в коде контроллеров их нет.
+
 Создание пользователя: 
 
 curl -i -X  POST -H "Content-Type:application/json" -d '{  "name" : "P1" }' http://localhost:8080/persons
