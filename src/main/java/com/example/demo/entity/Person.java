@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Person {
@@ -10,8 +11,8 @@ public class Person {
 
     private String name;
 
-    @OneToOne
-    private Vehicle vehicle;
+    @OneToMany(mappedBy="personId")
+    Set<Vehicle> vehicle;
 
     public String getName() {
         return name;
@@ -21,11 +22,11 @@ public class Person {
         this.name = name;
     }
 
-    public Vehicle getVehicle() {
+    public Set<Vehicle> getVehicles() {
         return vehicle;
     }
 
-    public void setVehicle(Vehicle vehicles) {
+    public void setVehicle(Set<Vehicle> vehicles) {
         this.vehicle = vehicles;
     }
 }

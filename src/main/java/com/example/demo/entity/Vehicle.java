@@ -14,6 +14,8 @@ public class Vehicle {
 
     private String name;
 
+    private Long personId;
+
     public String getName() {
         return name;
     }
@@ -21,4 +23,13 @@ public class Vehicle {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Long getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Long personId) {
+        this.personId = personId;
+    }
+
 }

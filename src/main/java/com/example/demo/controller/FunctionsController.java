@@ -32,7 +32,7 @@ public class FunctionsController {
         Person person = p.orElseThrow(() -> new IllegalArgumentException("Cannot find person"));
         Optional<Vehicle> v = vehicleRepository.findById(vehicleId);
         Vehicle vehicle = v.orElseThrow(() -> new IllegalArgumentException("Cannot find vehicle"));
-        person.setVehicle(vehicle);
+        vehicle.setPersonId(personId);
         personRepository.save(person);
     }
 
